@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>DC's Changing Landscape</title>
+    <title>Financial Inclusion Tracker Survey - Tanzania</title>
     <link rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.css" type="text/css" />
     <link rel="stylesheet" href="fonts/fonts.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -12,50 +12,43 @@
     <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.uncompressed.js'></script>
     <script src="ext/jquery.min.js"></script>
     <script src="ext/mapbox.jquery.js"></script>
-    <script src="ext/mapbox.jquery.geocoder.js"></script>
     <script src="ext/mapbox.share.js"></script>
 
   </head>
 
   <!-- Here we use `data-map` to specify the id of the div the map is in -->
   <body data-map="map">
+  <div id="overlay"></div>
+  <div id="masthead"><a href="http://www.intermedia.org" class="intermedia" title="intermedia.org">from InterMedia</a></div>
+  <div id="header"><h1>Tanzania Financial Inclusion Tracker Survey</h1></div>
     <div id="content">
 
       <div id='branding'></div>
       <div id="about">
-        <h1>DC's Changing Landscape</h1>
-        <p>Over the past few years, Washington DC has been undergoing economic, social, and demographic shifts. Property values in particular have been changing rapidly as parts of the city undergo aggressive development. See how these factors are shaping DC.</p>
+        <h1>Financial Inclusion Tracker Survey - Tanzania</h1>
+        <p>Lorem ipsum dolor sit amet, vel te rationibus dissentias. Vix no unum omnium deterruisset, his at novum facete, cum an case quaestio quaerendum. Denique partiendo aliquando duo eu, sit audiam ullamcorper ut. Vim eu hinc adversarium, nec mentitum pertinax adolescens no. Purto instructior at est, quo mollis regione facilis id.</p>
 
-        <!-- Geocoder -->
-        <div data-control="geocode" id="search">
-          <form class="geocode">
-            <input placeholder="Search for an address" type="text">
-            <input type="submit" />
-            <div id="geocode-error"></div>
-          </form>
-        </div>
 
       </div>
     </div>
 
     <!-- Layer switcher -->
     <div id="projects" class="layers" data-control="switcher">
-      <a href="#building" data-zoom="14" data-lat="38.91060" data-lon="-77.00126">Building Permits, 2011</a>
-      <a href="#construction" data-zoom="12">City Construction Projects, 2011</a>
+      <a href="#cellaccess" data-zoom="6">Mobile Phone Access</a>
+      <a href="#mmuser" data-zoom="6">Mobile Money User</a>
     </div>
 
-    <div id="crime" class="layers" data-control="switcher">
-      <a href="#crime" data-zoom="13">Total Crime, 2011</a>
-      <a href="#robbery">Robbery, 2011</a>
-      <a href="#theft">Theft, 2011</a>
-      <a href="#auto">Theft from Auto, 2011</a>
+    <div id="demog" class="layers" data-control="switcher">
+      <a href="#crime" data-zoom="6">% under $2 per day</a>
+      <a href="#robbery">% rural</a>
+      <a href="#theft">% unbanked</a>
     </div>
 
     <div id="map" class="map">
       <div class="map-legends">
         <div class="map-legend" style="display: block; ">
           <div class="scale">
-            <label><a href="http://data.dc.gov/Main_DataCatalog.aspx?id=10">% Change in property value '10-'11</a></label>
+            <label>Legend</label>
             <div><img src="img/grid-scale-2.png" /></div>
             <div>
               <span>-20</span>
@@ -68,14 +61,6 @@
               <span>10</span>
               <span>20</span>
             </div>
-          </div>
-          <div>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVQIHWNkaPjPpPhitcn/f4xZDP8ZXjD8/tLBIvhsNe9/BqZ1jAwM0gyMDL8ZWHhYmLj/fmIGCzCAwH/mf8wM6kzizH8////PMBEsxvD/HdPf/5MY/wNFGMNWM0tzfhdgZeL7e39+wAcAdhYlGm+mTIMAAAAASUVORK5CYII=" style="margin-bottom: 2px;">
-            <label><a href="http://data.dc.gov/Main_DataCatalog.aspx?id=5">Construction project</a></label>
-          </div>
-          <div>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVQIHWP8//8/AxgwMjIyQDmM/52D4xkYmGYzMDIwAwX7GfasLgEKhn4GCvBAlDP8Y3h/j4MJKPAXKsAAVPmP4ezZP0wM/xkigIIfgfR3BgbGcpC5AExlIK8M2/cpAAAAAElFTkSuQmCC" style="margin-bottom: 2px;">
-            <label><a href="http://data.dc.gov/Main_DataCatalog.aspx?id=3">Crime incident</a></label>
           </div>
         </div>
       </div>

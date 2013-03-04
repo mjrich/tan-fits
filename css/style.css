@@ -78,9 +78,38 @@ a {
 
 /* Layout */
 
+#masthead {
+  background: #63aece url('img/logo.png') repeat-x bottom;
+  height: 20px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  }
+  #masthead a.intermedia {
+    background: transparent url('img/intermedia.png') no-repeat 0 0;
+    width: 160px;
+    height: 20px;
+    display: block;
+    padding-left: 80px;
+    color: #fff;
+    }
+
+#header {
+  background: #fdfffc url('img/logo.png') repeat-x bottom;
+  height: 45px;
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  z-index: 100;
+  -moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.10);
+  }
+
 h1 {
     display: block;
-    margin: 20px 0;
+    padding: 5px 0px 5px 5px;
     }
 
 p {
@@ -98,21 +127,21 @@ body > div {
     width: 100%;
     z-index: 0;
     }
-
+/*
 #branding {
 	position: absolute;
-    height: 145px;
-    width: 150px;
+    height: 100%;
+    width: 360px;
     left: 0;
-    float: left;
     background: url(../img/logo.png) 30px 60px no-repeat;
     }
-
+*/
 #content {
 	position: absolute;
-    height: 200px;
-	width: 100%;
-	bottom: 0px;
+   	height: 100%;
+	width: 360px;
+	top: 65px;
+	right: 0;
     background: rgb(255,255,255); /* old ie */
     background: rgba(255,255,255,.9);
     border-bottom: 1px solid #ccc;
@@ -122,18 +151,15 @@ body > div {
     }
     
 #about {
-    margin-left: 150px;
-    width: 689px;
-    float: left;
-    padding: 0 20px;
-    border-left: 1px solid #bbb;
+    width: 300px;
+    margin: 20px;
     }
 
 .layers {
     position: absolute;
     width: 120px;
     left: 10px;
-    top: 80px;
+    top: 150px;
     }
     
 .layers a {
@@ -150,9 +176,9 @@ body > div {
     color: white;
     }
 
-.layers#crime {top: 220px;}
+.layers#demog {top: 260px;}
 
-#crime.layers a:hover, #crime.layers a:focus, #crime.layers a.active {
+#demog.layers a:hover, #demog.layers a:focus, #demog.layers a.active {
     border-left: 5px solid #333;
     background: #e34f3f;
     color: white;
@@ -165,62 +191,11 @@ body > div {
     margin-right: 20px;
     }
 
-#search {
-    height: 30px;
-    margin-bottom: 20px;
-    }
 
-form.geocode input[type=text] {
-    font-size: .85em;
-    color: #333;
-    height: 18px;
-    width: 200px;
-    display: block;
-    float: left;
-    padding: 5px;
-    margin: 0;
-    border: 1px solid  #ccc;
-    }
-    
-form.geocode input[type=submit] {
-    background: #2da0ef url(../img/search.png) no-repeat -0px -0px;
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
-    display: block;
-    border: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-    cursor: pointer;
-    }
-    
-    form.geocode input[type=submit]:hover { background-color:#333; }
-	form.geocode input[type=submit]:active { background-color:#000; }
-	
-form.geocode.loading input[type=submit] {
-    background: url(img/ajax-loader.gif) no-repeat 50% 50%;
-    border-color:#bbb;
-    background-color:#ddd;
-    box-shadow:inset rgba(0,0,0,0.1) 0px 1px 3px;
-    -moz-box-shadow:inset rgba(0,0,0,0.1) 0px 1px 3px;
-    -webkit-box-shadow:inset rgba(0,0,0,0.1) 0px 1px 3px;
-    }
-    
-#geocode-error {
-    display: none;
-    float: left;
-    position: relative;
-    top: 1em;
-    margin-left: 20px;
-    color: #e34f4f;
-    font-size: 1em;
-    line-height: 0em;
-    }
     
 a.zoomer {
 	position: absolute;
-    top: 10px;
+    top: 80px;
     }
 
 /* Map */
@@ -294,13 +269,18 @@ a.zoomer {
     }
 
 .map-legends {
-    left: auto;
-    right: 10px;
-    height: 125px;
-    overflow-x: hidden;
-    bottom: 215px;
-    font-size: 11px;
-	font: .9em/1.5em 'OpenSans', sans-serif;
+  z-index: 100;
+  position: absolute;
+  background: white;
+  border: 1px solid #8C8C8C;
+  border: 1px solid rgba(0, 0, 0, .45);
+  border-bottom: 1px solid #666;
+  -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+  right: 370px;
+  bottom: 10px;
+  padding: 10px;
     }
     
 .map-legends a {
@@ -341,7 +321,6 @@ a.zoomer {
 
 .map-legend .scale > div {
     }
-
 .map-attribution {
     bottom: 205px;
     }
@@ -364,7 +343,7 @@ a.zoomer {
     }
 
 .share {
-    top: 45px;
+    top: 100px;
     z-index: 2;
     }
     
@@ -412,7 +391,7 @@ a.zoomer {
     }
 
 .embed .share {
-    top: 45px;
+    top: 100px;
     z-index: 1001;
     }
 

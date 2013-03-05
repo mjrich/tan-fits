@@ -48,6 +48,15 @@ table {
 	border-spacing: 0;
     }
 
+hr { 	border:dashed #b4b4b4;; 
+	border-width:1px 0 0 0; 
+	height:0;
+	line-height:0px;
+	font-size:0;
+	margin:0;
+	padding:0;
+    }
+
 /* Typography */
 
 body,
@@ -127,15 +136,6 @@ body > div {
     width: 100%;
     z-index: 0;
     }
-/*
-#branding {
-	position: absolute;
-    height: 100%;
-    width: 360px;
-    left: 0;
-    background: url(../img/logo.png) 30px 60px no-repeat;
-    }
-*/
 #content {
 	position: absolute;
    	height: 100%;
@@ -154,6 +154,24 @@ body > div {
     width: 300px;
     margin: 20px;
     }
+
+#rural, #poverty, #unbanked, #cellaccess,
+#owncell, #ownsim, #owncell, #mmuser,
+#registereduser, #agentproblem, #mmstore {
+    font-weight:bold;
+    font-size: 2em;
+}
+
+#stats, #mobile, #mmoney {
+position:absolute;
+left: 120px;
+border-bottom: 1px dashed #b4b4b4;
+}
+
+#credit {
+bottom: 0; 
+font-size: .75em;
+}
 
 .layers {
     position: absolute;

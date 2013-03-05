@@ -39,4 +39,30 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
     // Enable share control
     mapbox.share().map(map).add();
 
+    map.addLayer(mapbox.layer().id('maxrichman.tan-fits-cellaccess', function() {
+    // this function runs after the layer is loaded
+    // from MapBox and we know what interactive features are supported.
+    map.interaction.auto();
+    map.interaction.off('on');
+    map.interaction.off('off');
+    map.interaction.on({
+        on: function(o) {
+            document.getElementById('regionname').innerHTML = o.data.region;
+            document.getElementById('cellaccess').innerHTML = Math.round(o.data.cellaccess *100) +'%';
+            document.getElementById('mmuser').innerHTML = Math.round(o.data.mmuser *100) +'%';
+            document.getElementById('registereduser').innerHTML = Math.round(o.data.registereduser *100) +'%';
+            document.getElementById('rural').innerHTML = Math.round(o.data.rural *100) +'%';
+            document.getElementById('poverty').innerHTML = Math.round(o.data.poverty *100) +'%';
+            document.getElementById('unbanked').innerHTML = Math.round(o.data.rural *100) +'%';
+            document.getElementById('rural').innerHTML = Math.round(o.data.rural *100) +'%';
+            document.getElementById('poverty').innerHTML = Math.round(o.data.poverty *100) +'%';
+            document.getElementById('unbanked').innerHTML = Math.round(o.data.rural *100) +'%';
+            document.getElementById('mmstore').innerHTML = Math.round(o.data.mmstore *100) +'%';
+            document.getElementById('agentproblem').innerHTML = Math.round(o.data.agentproblem *100) +'%';
+            document.getElementById('owncell').innerHTML = Math.round(o.data.owncell *100) +'%';
+            document.getElementById('ownsim').innerHTML = Math.round(o.data.ownsim *100) +'%';
+        }
+    });
+}));
+
 });

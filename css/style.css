@@ -88,7 +88,7 @@ a {
 /* Layout */
 
 #masthead {
-  background: #63aece url('img/logo.png') repeat-x bottom;
+  background: #63aece url('img/intermedia.png') repeat-x bottom;
   height: 20px;
   position: absolute;
   width: 100%;
@@ -100,12 +100,12 @@ a {
     width: 160px;
     height: 20px;
     display: block;
-    padding-left: 80px;
+    padding-left: 10px;
     color: #fff;
     }
 
 #header {
-  background: #fdfffc url('img/logo.png') repeat-x bottom;
+  background: #fdfffc url('img/intermedia.png') repeat-x bottom;
   height: 45px;
   position: absolute;
   width: 100%;
@@ -118,7 +118,7 @@ a {
 
 h1 {
     display: block;
-    padding: 5px 0px 5px 5px;
+    padding: 5px 5px 5px 5px;
     }
 
 p {
@@ -152,7 +152,7 @@ body > div {
     
 #about {
     width: 300px;
-    margin: 20px;
+    margin: 10px;
     }
 
 #rural, #poverty, #unbanked, #cellaccess,
@@ -169,8 +169,16 @@ border-bottom: 1px dashed #b4b4b4;
 }
 
 #credit {
-bottom: 0; 
-font-size: .75em;
+position: absolute;
+top: 520px; 
+font-size: .7em;
+line-height:100%;
+}
+
+#intermedia {
+position: absolute;
+left:100px;
+height:80px;
 }
 
 .layers {
@@ -286,7 +294,7 @@ a.zoomer {
     margin-top: 5px;
     }
 
-.map-legends {
+.wax-legends {
   z-index: 100;
   position: absolute;
   background: white;
@@ -296,49 +304,16 @@ a.zoomer {
   -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
   -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
   box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
-  right: 370px;
+  left: 10px;
   bottom: 10px;
   padding: 10px;
-    }
-    
-.map-legends a {
-    color: rgb(51, 51, 51);
-    }
-
-.map-legends .map-legend {
-    width: 275px;
+  }
+  .sources {
+    color: #000;
+    font-size: 85%;
     }
 
-.map-legends .scale img { 
-    float: left; 
-    }
 
-.map-legend {
-    padding: 10px;
-    }
-
-.map-legend .scale {
-    width: 100%;
-    margin-bottom: 0;
-    }
-.map-legend > div {
-    clear: both;
-    } 
-.map-legend .scale span {
-    display: block;
-    width: 30px;
-    float: left;
-    text-align: center;
-    font-size: 9px;
-    }
-
-.map-legends .scale label {
-    display: block;
-    margin-bottom: 5px;
-    }
-
-.map-legend .scale > div {
-    }
 .map-attribution {
     bottom: 205px;
     }

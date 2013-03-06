@@ -1,10 +1,10 @@
 var TileJSONs = [
-    'http://a.tiles.mapbox.com/v3/examples.map-20v6611k,maxrichman.tan-fits-cellaccess.jsonp',
-    'http://a.tiles.mapbox.com/v3/maxrichman.tan-fits-cellaccess.jsonp',
-    'http://a.tiles.mapbox.com/v3/maxrichman.tan-fits-mmuser.jsonp',
-    'http://a.tiles.mapbox.com/v3/mapbox.dc-crime.jsonp',
-    'http://a.tiles.mapbox.com/v3/mapbox.dc-crime-robbery.jsonp',
-    'http://a.tiles.mapbox.com/v3/mapbox.dc-crime-theft.jsonp',
+    'http://a.tiles.mapbox.com/v3/examples.map-20v6611k,intermedia.tan-fits-cellaccess.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-cellaccess.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-mmuser.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-poverty.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-rural.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-unbanked.jsonp',
 ];
 
 $('#map').mapbox(TileJSONs, function(map, tiledata) {
@@ -13,9 +13,9 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
     map.getLayerAt(0).named('base');
     map.getLayerAt(1).named('cellaccess');
     map.getLayerAt(2).named('mmuser');
-    map.getLayerAt(3).named('crime');
-    map.getLayerAt(4).named('robbery');
-    map.getLayerAt(5).named('theft');
+    map.getLayerAt(3).named('poverty');
+    map.getLayerAt(4).named('rural');
+    map.getLayerAt(5).named('unbanked');
 
     // Don't composite base layer with other layers
     map.getLayer('base').composite(false);
@@ -23,9 +23,9 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
     // Disable all overlay layers by default
     map.disableLayer('cellaccess');
     map.disableLayer('mmuser');
-    map.disableLayer('crime');
-    map.disableLayer('robbery');
-    map.disableLayer('theft');
+    map.disableLayer('poverty');
+    map.disableLayer('rural');
+    map.disableLayer('unbanked');
 
     // Set initial latitude, longitude and zoom level
     map.setCenterZoom({

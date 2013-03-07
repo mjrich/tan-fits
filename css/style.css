@@ -157,7 +157,7 @@ body > div {
 
 #rural, #poverty, #unbanked, #cellaccess,
 #owncell, #ownsim, #owncell, #mmuser,
-#registereduser, #agentproblem, #mmstore {
+#registereduser, #agentproblem, #mmstore, #mediankm {
     font-weight:bold;
     font-size: 1.5em;
     float:right;;
@@ -176,6 +176,7 @@ position: absolute;
 top: 500px; 
 font-size: .7em;
 line-height:110%;
+margin:10px;
 }
 
 #intermedia {

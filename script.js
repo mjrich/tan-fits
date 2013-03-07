@@ -1,10 +1,10 @@
 var TileJSONs = [
-    'http://a.tiles.mapbox.com/v3/examples.map-20v6611k,intermedia.tan-fits-cellaccess.jsonp',
-    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-cellaccess.jsonp',
-    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-mmuser.jsonp',
-    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-poverty.jsonp',
-    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-rural.jsonp',
-    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-unbanked.jsonp',
+    'http://a.tiles.mapbox.com/v3/examples.map-20v6611k,intermedia.tan-fits-cellaccess2.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-cellaccess2.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-mmuser2.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-poverty2.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-rural2.jsonp',
+    'http://a.tiles.mapbox.com/v3/intermedia.tan-fits-unbanked2.jsonp',
 ];
 
 $('#map').mapbox(TileJSONs, function(map, tiledata) {
@@ -39,7 +39,7 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
     // Enable share control
     mapbox.share().map(map).add();
 
-    map.addLayer(mapbox.layer().id('intermedia.tan-fits-transparency', function() {
+    map.addLayer(mapbox.layer().id('intermedia.tan-fits-trans', function() {
     // this function runs after the layer is loaded
     // from MapBox and we know what interactive features are supported.
     map.interaction.auto();
@@ -61,10 +61,11 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
             document.getElementById('agentproblem').innerHTML = Math.round(o.data.agentproblem *100) +'%';
             document.getElementById('owncell').innerHTML = Math.round(o.data.owncell *100) +'%';
             document.getElementById('ownsim').innerHTML = Math.round(o.data.ownsim *100) +'%';
+            document.getElementById('mediankm').innerHTML = o.data.mediankm + ' km';
+
         }
     });
 }));
-
 
 
 });

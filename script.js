@@ -39,7 +39,7 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
     // Enable share control
     mapbox.share().map(map).add();
 
-    map.addLayer(mapbox.layer().id('maxrichman.tan-fits-cellaccess', function() {
+    map.addLayer(mapbox.layer().id('intermedia.tan-fits-transparency', function() {
     // this function runs after the layer is loaded
     // from MapBox and we know what interactive features are supported.
     map.interaction.auto();
@@ -64,5 +64,7 @@ $('#map').mapbox(TileJSONs, function(map, tiledata) {
         }
     });
 }));
+
+
 
 });

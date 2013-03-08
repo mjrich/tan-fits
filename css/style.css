@@ -181,8 +181,9 @@ margin:10px;
 
 #intermedia {
 position: absolute;
-left:100px;
+left:80px;
 height:80px;
+padding:20px;
 }
 
 .layers {

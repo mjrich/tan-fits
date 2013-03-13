@@ -1,5 +1,7 @@
 # InterMedia Financial Inclusion Tracker Survey - Tanzania Web Map
 
+Click [here](http://mjrich.github.com/tan-fits) to see live version of map.
+
 Built using templates from [MapBox](http://www.mapbox.com).  Maps have a layer switcher as well as interactivity that pull in the following data
 
 ``
